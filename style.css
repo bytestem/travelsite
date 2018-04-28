@@ -1,0 +1,461 @@
+*{
+    box-sizing: border-box;   /* normalising html document, gettng rid of preset margins, etc.. */
+    padding:0;
+    margin:0;
+}
+:root{
+    --maincolor:#007ac9;
+}
+
+html{
+    font-family:'Open Sans Condensed', Arial;
+    color:#eee;
+    word-spacing: 2px;
+    background:#333;
+}
+.container{
+    display: grid;
+    max-width: 100%;
+    
+}
+p{letter-spacing: 1px;}
+
+h2{font-weight:100;}
+.overlay{
+    width: 100%; 
+    height: 100%;             /* OVERLAY CLASS USED TO PUT DARK FILTER OVER IMAGES.*/
+    background-color: rgba(0,0,0,0.6); 
+}
+.navbar{
+    background: url(archipelago.jpg);
+    background-size:cover;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:100px 520px;
+    align-items: center;
+   
+}
+.brand{
+    text-decoration:none;
+    font-family:'Nunito', Arial;
+    font-size:2rem;
+    font-weight: 800;
+    margin:;
+    color:#fff;
+    padding-left:1em;
+    align-self:center;
+}
+.nav{
+    display:none;
+}
+
+.navicon,.navicon::before,.navicon::after{  /* USING CONTENT AFTER AND BEFORE TO CREATE HAMBURGER MENU*/
+    content:"";
+    cursor:pointer;
+    display:block;
+    width:1.5em;
+    height:2px; 
+    background:#fff;
+    justify-self: right;
+    align-self: center;
+    transform: translate(-3em);
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.navicon::before{
+    transform: translateY(-.5em);
+}
+.navicon::after{
+    transform: translateY(.4em);
+}
+.title{
+    color:#eee;
+    grid-column: span 2;
+    text-align: center;
+    text-shadow: 0 1px #000;
+    align-self:center;
+}
+.title h1{
+    font-size:1.8rem;
+    font-weight: 600;
+    margin-bottom: 1em;
+}
+.title p{
+    font-weight: 600;
+    font-size:2rem ;
+}
+.sidemenu{
+    position:fixed;
+    width:0;
+    height:100%;
+    top:0;
+    right:0;
+    background:#222;
+    overflow: auto;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    transition: 500ms;
+}
+.sidemenu a{
+    display:block;
+    margin:.5rem 1rem .5rem 2rem;
+    font-weight:bold;
+    text-decoration:none;
+    color:#ddd;
+    letter-spacing: 1px;
+}
+.close{
+    margin:1rem;
+    font-size: 2rem;
+    cursor:pointer;
+}
+/*----------------------*/
+form{
+    display:grid;
+}
+form p{margin-left:4rem;}
+form p:first-of-type{margin-top:4rem;}
+form input[type=text]{
+    margin:1rem 4rem;
+    padding:1rem;
+    border:2px solid #555;
+    background:#666;
+    color:#bbb;
+}
+form input[type=text]:focus{
+    border:2px solid var(--maincolor);
+}
+form input[type=submit]{
+    color:#eee;
+    margin: 2rem 4rem 4rem 4rem;
+    padding:.8rem;
+    background: var(--maincolor);
+    cursor:pointer;
+    border-radius:35px;
+    border: none;
+}
+/*//////./RW3///////*/
+.row3{
+    display: grid;
+    background: #fff;
+    color:#222;
+}
+
+.tagline{
+    display: grid;
+    justify-items: center;
+    padding:5rem;
+}
+.round{
+    display:grid;
+    justify-content: center;
+    align-content: center;
+    height:110px;
+    width:110px;
+    border-radius:50%;
+    background: #eee;
+}
+.tagline img{
+    height: 80px;
+    width: 80px;
+}
+.tagline h1{
+    margin: 1rem;
+    font-weight:lighter;
+}
+.tagline p{
+    word-spacing:2px ;
+}
+.tagline h1,.tagline p{
+    text-align: center;
+}
+/*///////////RW4///////////////*/
+.row4{
+    display: grid;
+    position: relative;
+    background:#eee;
+    color:#222;
+}
+    
+
+.heading{
+    margin-top:4rem;
+    text-align: center;
+    max-width:1200px;
+}
+.heading h1,.heading p{
+    margin:1rem;
+}
+.heading p{
+    margin-bottom: 5rem
+}
+.preview{
+
+    position: relative;
+    max-height:;
+    height: 260px;
+    background: no-repeat url(greece.jpg);
+    background-position:center;
+    background-size: cover;
+}
+
+
+.destination{
+    position:absolute;
+    bottom:0;
+    left:0;
+    margin-left:8px;
+    margin-bottom: 12px;
+}
+
+.destination span{
+    color:#eee;
+    font-size:;
+}
+.destination h2{color:#fff;}
+
+.destination p{
+    color:#fff;
+    font-size:1.6rem;
+    padding:3px;
+    background: var(--maincolor);
+    display: inline;
+}   
+.star{
+    margin:-2px;
+    color:#ddf704;
+}
+                                            /* USING NTH CHILD PSEUDO SELECTORS HERE INSTEAD OF CREATING SEPERATE CLASSES FOR PREVIEW ELEMENTS */ 
+.preview:nth-child(3){
+    background: url(bahamas.jpg);
+    background-position: center;
+    background-size:cover;
+}
+.preview:nth-child(4){
+    background: url(srilanka.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.preview:nth-child(5){
+    background: url(dubai.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.preview:nth-child(6){
+    background: url(canoe.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.preview:nth-child(7){
+    background: url(antarctica.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.preview:nth-child(8){
+    background: url(hawaii.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.preview:nth-child(9){
+    background: url(antarctica.jpg);
+    background-position: center;
+    background-size: cover;
+}
+/*///////RW5////////*/
+.row5{
+    display:grid;
+    grid-template-columns: 33% auto;
+    background: #eee;
+    color:#222;
+}
+
+.bloghead{
+    grid-column: span 2;
+    text-align: center;
+    margin:2rem .5rem;
+    padding:1rem;
+}
+.bloghead p{
+    padding: 1rem;
+}
+.blogicon{
+    height:100px;
+    width:100px;
+    margin:2rem;
+    border-radius:50%; 
+}
+
+.blog{margin:2rem;}
+
+.blog h1{
+    font-size:1.5rem;
+    margin-top:.5rem;
+    margin-bottom:.5rem;
+}
+.placehold{display: none;}
+/*///////RW6/////////*/ 
+
+.row6{
+    background: url(hawaii.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+
+#thirty{
+    display:inline-block;
+    color:var(--maincolor);   
+    font-family: 'Nunito', Arial;
+    font-size: 5.4rem;
+    font-weight: 800;
+    margin-left: 1rem;
+    margin-top:3rem;
+    
+}
+#off{
+    display:inline-block;
+    font-family: 'Nunito', Arial;
+    font-size:2.4rem;
+    margin-left:-3rem;
+}
+#sale{
+    margin-left:1rem;
+    font-family: 'Nunito', Arial;
+    font-size:5.5rem;
+}
+.salesbanner h1{
+    margin-left: 1rem;
+}
+.salesbanner p{
+    margin-left:1rem;
+}
+.salesbanner a{
+    text-decoration: none;
+    font-size:1.3em;
+    margin:1rem;
+    padding:4px 25px;
+    border-radius: 18px;
+}
+a[href="#"]{
+    color:#222;
+    background: var(--maincolor);
+}
+a[href="~"]{
+    color:#eee;
+    border:1px solid #eee;
+}
+.vidscan{
+    background: url(dock.jpg);
+    background-size:cover;
+    background-position: center;
+    position: relative;
+    margin: 0 auto;
+    width:90%;
+    height:340px;
+    
+}
+.vidscan img{
+    height:100px;
+    width:100px;
+    position:absolute;
+    top:35%;
+    left:35%;
+}
+/*//////RW7////.//*/
+.testimonial{
+    text-align: center;
+    background: #eee;
+    color:#222;
+}
+.row7 h1{
+    margin:3rem 2rem 2rem 2rem;
+}
+.row7 p{
+    padding:1rem;
+}
+.row7 img{
+    height:100px;
+    width:100px;
+    margin:1rem;
+    border-radius:50%;
+}
+/*/////////RW8///////////*/
+.row8{
+    display: grid;
+    text-align: center;
+    background: no-repeat url(hawaii.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.row8 h1{margin-top:3rem;
+    margin-bottom:1.3rem;}
+.row8 p{
+    font-size:1.5rem;
+    margin: 1rem;
+}
+.subbox input[type="text"]{
+    color:#333;
+    background:#ddd;
+    margin:2rem 1rem;
+    padding:10px;
+    border-radius:30px;
+    border:none;
+}
+.subbox input[type="submit"]{
+    position:relative;
+    
+    width:95px;
+    padding: 10px;
+    border-radius: 30px;
+    background: var(--maincolor);
+    border:none;
+}
+/*/////////Footer/////*/
+.footer{
+    display:grid;
+    color:#eee;
+}
+.footeritems{
+    margin:1rem;
+}
+.footeritems h2, .footeritems p{
+    margin-top:1rem;
+    margin-bottom:1rem;
+}
+.footeritems p{
+    letter-spacing: 1px;
+}
+.footeritems .icon{
+    margin-top:12px;
+    margin-right:12px;
+    margin-bottom:12px;
+    font-size:1.5rem;
+    color:var(--maincolor);
+    cursor: pointer;
+}
+.footer li{
+    list-style: none;
+    background: none;
+    margin:.5rem;
+}
+.footer a{
+    text-decoration: none;
+    color:#888
+}
+.footer a:hover{
+    text-decoration: underline;
+}
+#top{
+    height:50px;
+    width:50px;
+    border-radius: 5px;
+    background: var(--maincolor);
+    position: fixed;
+    bottom: 7px;
+    right: 7px;
+    z-index: 50;
+    cursor:pointer;
+}

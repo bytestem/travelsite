@@ -1,0 +1,125 @@
+/*---MEDIA QUERIES----*/
+
+
+/* 602px first major breakpoint*/
+@media screen and (min-width: 602px){
+    
+    .title h1, .title p{font-size: 2.2rem;}
+    .row4{grid-template-columns: 1fr 1fr; }
+    
+    .heading{grid-column: span 2;}
+
+    
+    .row5{
+        grid-template-columns: auto 15% 34%;
+        grid-template-areas: ". . ."
+                             "image icon0 blog0"
+                             "image icon1 blog1"
+                             "image icon2 blog2";
+    }
+    
+    .bloghead{grid-column: span 3;}
+    
+    #icon0{grid-area:icon0;}
+    #icon1{grid-area:icon1;}
+    #icon2{grid-area:icon2;}
+    
+    #blog0{grid-area: blog0;}
+    #blog1{grid-area: blog1;}
+    #blog2{grid-area: blog2;}
+    
+    .placehold{                    /*--===PLACEHOLDER DIV FOR BACKGROUND IMAGE FOR TABLETS AND DESKTOPS*/
+        display: block;
+        grid-area: image;
+        margin: 0 1rem;
+        background:no-repeat url(gatebridge.jpg);
+        background-size: cover;
+    }
+}
+/*      DESKTOP VIEW         */
+@media screen and (min-width: 986px){
+    
+    .navicon{display:none;}
+    
+    .nav{display:inline;
+        justify-self:end;}
+    
+    .navitem{list-style: none;
+            display:inline;
+            margin:.8rem;}
+    
+    .navitem a{
+        text-decoration: none;
+        font-size:1.1rem;
+        color:#fff;}
+    .navitem a:hover{color:var(--maincolor);}
+    #lastitem{margin-right:2rem;}
+    /*------- FORM -------------------*/
+    form{
+        grid-template-columns: 25% 1fr 15% 25%;
+        grid-template-areas: "label1 label2 label3 ."
+                            "input1 input2 input3 input4";
+        
+        
+    }
+    form p{margin-right:1rem;}
+    form[inout]
+    
+    #label1{
+        grid-area: label1;
+        margin-top:3rem;
+        padding:0;}
+    #label2{
+        grid-area: label2;
+        margin-top:3rem;
+        padding:0;}
+    #label3{
+        grid-area: label3;
+        margin-top:3rem;
+        padding:0;}
+    #input1{
+        grid-area: input1;
+        margin:1rem;
+        }
+    #input2{grid-area: input2;
+            margin:1rem; }
+    #input3{grid-area: input3;
+            margin:1rem;}
+    #input4{grid-area: input4; 
+            margin:1rem;}
+    
+
+    /*TAGLINES   */
+    .row3{
+        grid-template-columns: repeat(4, 1fr);
+        height: 500px;}
+    
+    .tagline h1,.tagline p{
+        width:175%;}
+    /*------------*/
+    
+    .row4{grid-template-columns: repeat(4, 1fr);}
+    
+    .heading{
+        grid-column: span 4;
+    }
+    /*----SALESBANNER---------*/
+    
+    .row6{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: ". saleright";
+    }
+    
+    .vidscan{grid-area:saleright;}
+    
+    /*-----------------*/
+    
+    /*subbox/*/
+    
+    .footer{
+        grid-template-columns:repeat(4, 1fr);
+        grid-template-areas: ;
+    }
+    
+}
