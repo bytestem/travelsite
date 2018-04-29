@@ -16,6 +16,7 @@ html{
 .container{
     display: grid;
     max-width: 100%;
+    overflow: hidden;
     
 }
 p{letter-spacing: 1px;}
@@ -345,7 +346,9 @@ a[href="#"]{
 a[href="~"]{
     color:#eee;
     border:1px solid #eee;
+    transition: 600ms;
 }
+a[href="~"]:hover{background: var(--maincolor);}
 .vidscan{
     background: url(dock.jpg);
     background-size:cover;
@@ -406,7 +409,7 @@ a[href="~"]{
 }
 .subbox input[type="submit"]{
     position:relative;
-    
+    cursor: pointer;
     width:95px;
     padding: 10px;
     border-radius: 30px;

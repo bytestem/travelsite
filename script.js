@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function(){   //try to change to vanilla js
     
     $("#top").click(function(){
 
@@ -17,11 +17,12 @@ $(document).ready(function(){
 });
 
 function openSlideMenu(){
-    
     document.getElementById('sidenav').style.width = "50%"; //ADD OVERLAY CLASS
 }
 
-function closeSlideMenu(){
-    
-    document.getElementById('sidenav').style.width = "0";
+function closeMenu(){
+    document.getElementById('sidenav').style.width = "0";    //make background close menu
 }
+
+
+
